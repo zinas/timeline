@@ -1,0 +1,35 @@
+@import '../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap';
+
+#timeline {
+  height: 300px;
+}
+
+.brush .extent {
+  stroke: #fff;
+  fill-opacity: .125;
+  shape-rendering: crispEdges;
+}
+.hoverable {
+  fill-opacity: 0.7;
+  stroke: #fff;
+}
+.hoverable:hover {
+  fill-opacity: 1;
+}
+.tip {
+  position: absolute;
+  display: none;
+  border: 1px solid #777;
+  border-radius: 5px;
+  background: #fff;
+  padding: 5px;
+  box-shadow: 0px 0px 10px 0px rgba(50,50,50,0.5);
+}
+
+.navbar {
+  margin: 20px 0 40px;
+}
+
+.navbar-btn {
+  margin-right: 10px;
+}

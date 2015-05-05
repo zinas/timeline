@@ -1,0 +1,62 @@
+<!doctype html>
+<head>
+  <meta charset="utf-8">
+  <title>timeline</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width">
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+  <link rel="stylesheet" href="styles/main.css">
+
+</head>
+<body>
+  <div class="container">
+
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="http://nl.linkedin.com/in/zinas" target="_blank">Nikos Zinas</a>
+        </div>
+        <div class="navbar-right">
+          <button type="button" data-toggle="modal" data-target="#myModal" class="btn btn-default navbar-btn">Readme</button>
+        </div>
+      </div>
+    </nav>
+    <div id="app"></div>
+  </div>
+
+<div class="modal fade" id="myModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Implementation Summary</h4>
+      </div>
+      <div class="modal-body">
+        <h3>Data model</h3>
+        <p>To mock the data needed, a couple of objects were created which can be found under the /data folder.</p>
+        <p>Record basically means one event, something that happens during the course of a frame. It can be one of several categories, eg. Scripting or Painting. In reality each Record could have several records itself, but for simplicity reasons this wasn't implemented</p>
+        <p>Frame is basically a collection of Records.</p>
+        <p>And finally, there is an object which initializes the frames array and emulates an asynchronous call, as it would happen if we fetched them from a database.</p>
+        <h3>D3 and Graphs</h3>
+        <p>There is one many D3 object, called timeline. This object contains 2 groups, one for frames and one for records. Also, there is a brush which allows you to zoom in for the frames and pan, in order to see the records you want. Finally, by hovering on the records, you can see more details.</p>
+        <h3>Reach components</h3>
+        <p>There is a &lt;Timeline&gt; component to host the whole graph. It didn't make any sense to create any more, based on the requirements. The only thing that could be another component is the tooltip, but only for the markup. The functioanlity wouldn't be encapsulated in the component</p>
+        <h3>Implementation duration</h3>
+        <p>It took me around 16-20 hours, including the time to get more familiar with D3</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+  <!-- build:js scripts/vendor.js -->
+  <!-- bower:js -->
+  <!-- endbower -->
+  <!-- endbuild -->
+  <script src="scripts/app.js"></script>
+</body>
+</html>
